@@ -1,0 +1,15 @@
+.lineclamps{
+    display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.prose :where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  /* color: var(--tw-prose-headings); */
+  /* font-weight: 700; */
+  font-size: 1.5em;
+  /* margin-top: 0em; */
+  /* margin-bottom: 1em; */
+  line-height: 1.3333333;
+}

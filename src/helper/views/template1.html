@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div className="font-sans text-gray-800 p-6">
+      <h2 className="text-2xl font-bold text-green-600">Contact Us</h2>
+      <p>Dear {name},</p>
+
+      <p>
+        Thank you for reaching out to us. We appreciate your interest and we are
+        here to assist you with any questions or concerns you may have. Please
+        find below the details you provided:
+      </p>
+
+      <table className="w-full mt-4 border-collapse">
+        <tbody>
+          <tr>
+            <td className="p-4 border bg-gray-100 font-semibold">Name:</td>
+            <td className="p-4 border">{name}</td>
+          </tr>
+          <tr>
+            <td className="p-4 border bg-gray-100 font-semibold">Email:</td>
+            <td className="p-4 border">{email}</td>
+          </tr>
+          <tr>
+            <td className="p-4 border bg-gray-100 font-semibold">Message:</td>
+            <td className="p-4 border">{message}</td>
+          </tr>
+          <tr>
+            <td className="p-4 border bg-gray-100 font-semibold">
+              Phone Number:
+            </td>
+            <td className="p-4 border">{phoneNumber}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p className="mt-4">
+        We will review your message and get back to you as soon as possible. If
+        you need immediate assistance, please feel free to contact us at
+        [Company Phone Number] or reply to this email.
+      </p>
+
+      <p>Best regards,</p>
+      <p>[Your Company Name]</p>
+      <p>[Company Website]</p>
+    </div>
+  </body>
+</html>

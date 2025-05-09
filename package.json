@@ -1,0 +1,38 @@
+{
+  "name": "lakshy-acadamy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "basic-ftp": "^5.0.5",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.5.1",
+    "cookies-next": "^4.2.1",
+    "dotenv": "^16.4.5",
+    "framer-motion": "^12.6.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0",
+    "next": "14.2.5",
+    "next-cloudinary": "^6.16.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-loader-spinner": "^6.1.6",
+    "react-toastify": "^10.0.6",
+    "sequelize": "^6.37.3",
+    "ssh2": "^1.16.0",
+    "tunnel-ssh": "^5.2.0",
+    "xlsx": "^0.18.5",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.14",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
