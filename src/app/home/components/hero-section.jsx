@@ -8,6 +8,7 @@ import jwt from "jsonwebtoken";
 import StudentLesson from "./lesson-section";
 import StudentNotice from "./notice-section";
 import StudentRating from "./student-rating";
+import PracticeCard from "./test-card";
 
 export default function HeroSection() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -66,48 +67,34 @@ export default function HeroSection() {
         <StudentLesson />
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-5">
-        <div
-          className="bg-white border text-custom-blue border-custom-blue rounded-lg shadow p-5 cursor-pointer"
-          onClick={() => openModal("addition")}
-        >
-          <h2 className="text-4xl  font-semibold mb-3">+</h2>
-          <h2 className="text-xl font-semibold mb-3">Addition</h2>
-          <p className="font-semibold">
-            Total Addition = {cardCounts.addition}
-          </p>
-        </div>
-        <div
-          className="bg-white text-custom-blue border border-custom-blue rounded-lg shadow p-5 cursor-pointer"
-          onClick={() => openModal("subtraction")}
-        >
-          <h2 className="text-4xl font-semibold mb-3">-</h2>
-          <h2 className="text-xl font-semibold mb-3">Subtraction</h2>
-          <p className="font-semibold">
-            Total Subtraction = {cardCounts.subtraction}
-          </p>
-        </div>
-
-        <div
-          className="bg-white text-custom-blue border border-custom-blue rounded-lg shadow p-5 cursor-pointer"
-          onClick={() => openModal("multiplication")}
-        >
-          <h2 className="text-4xl font-semibold mb-3">x</h2>
-          <h2 className="text-xl font-semibold mb-3">Multiplication</h2>
-          <p className="font-semibold">
-            Total Multiplication = {cardCounts.multiplication}
-          </p>
-        </div>
-
-        <div
-          className="bg-white text-custom-blue border border-custom-blue rounded-lg shadow p-5 cursor-pointer"
-          onClick={() => openModal("division")}
-        >
-          <h2 className="text-4xl font-semibold mb-3">÷</h2>
-          <h2 className="text-xl font-semibold mb-3">Division</h2>
-          <p className="font-semibold">
-            Total Division = {cardCounts.division}
-          </p>
-        </div>
+        <PracticeCard
+          title="Addition"
+          iconSrc="/assets/logo/addition3d.png"
+          totalCount={cardCounts.addition}
+          onClick={openModal}
+          modalIdentifier="addition"
+        />
+        <PracticeCard
+          title="Subtraction"
+          iconSrc="/assets/logo/substraction3d2.png"
+          totalCount={cardCounts.subtraction}
+          onClick={openModal}
+          modalIdentifier="subtraction"
+        />
+        <PracticeCard
+          title="Multiplication"
+          iconSrc="/assets/logo/multiplication3d.png"
+          totalCount={cardCounts.multiplication}
+          onClick={openModal}
+          modalIdentifier="multiplication"
+        />
+        <PracticeCard
+          title="Division"
+          iconSrc="/assets/logo/division3d.png"
+          totalCount={cardCounts.division}
+          onClick={openModal}
+          modalIdentifier="division"
+        />
       </div>
 
       <div className="container mx-auto grid grid-cols-1  gap-4 p-5">
