@@ -169,7 +169,7 @@ export default function TestModel({
         testId: testId,
         [fieldToUpdate]: totalScore,
         hwStatus,
-        timeTaken: formatElapsedTime(elapsedTime)
+        timeTaken: formatElapsedTime(elapsedTime),
       };
 
       try {
@@ -246,7 +246,29 @@ export default function TestModel({
                 <h2 className="text-xl text-custom-blue font-semibold py-2  sm:text-left">
                   Question : {currentIndex + 1}/{filteredData.length}
                 </h2>
-                <h3 className="text-lg text-custom-blue font-semibold transition-all duration-500 ease-in-out">
+                <h3 className="text-lg text-custom-blue font-semibold flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 animate-spin-slow text-custom-blue"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M12 6v6l4 2"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                   Time Start: {formatElapsedTime(elapsedTime)}
                 </h3>
               </div>
