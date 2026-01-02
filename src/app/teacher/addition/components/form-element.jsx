@@ -209,7 +209,7 @@ export default function FormStudentAddition({
                     }))
                   }
                 />
-                <span className="text-gray-700">
+                <span className="text-custom-blue dark:text-amber-300">
                   Enable multiple test attempts
                 </span>
               </div>
@@ -220,7 +220,7 @@ export default function FormStudentAddition({
                 (type) => (
                   <div key={type}>
                     <div className="flex items-center justify-between">
-                      <label className="text-gray-700 capitalize">{type}</label>
+                      <label className="text-custom-blue dark:text-amber-300 capitalize">{type}</label>
                       <button
                         type="button"
                         onClick={() => handleToggleField(type)}
