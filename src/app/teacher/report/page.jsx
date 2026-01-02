@@ -225,9 +225,18 @@ export default function StudentLists() {
             </div>
             <div className="sm:mt-0">
               <input
+                type="date"
+                id="dateSearch"
+                value={createdAt.length === 10 ? createdAt : ""}
+                className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white outline-none"
+                onChange={(e) => setCreatedAt(e.target.value)}
+              />
+            </div>
+            <div className="sm:mt-0">
+              <input
                 type="month"
                 id="monthSearch"
-                value={createdAt}
+                value={createdAt.length === 7 ? createdAt : ""}
                 className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white outline-none"
                 onChange={(e) => setCreatedAt(e.target.value)}
               />
@@ -265,7 +274,7 @@ export default function StudentLists() {
           setSelectedRows={setSelectedRows}
           showCheckbox={true}
           deleteButtonVisible={true}
-          // editButtonVisible={true}
+        // editButtonVisible={true}
         />
         <Pagination data={report} changePage={changePage} />
       </div>
