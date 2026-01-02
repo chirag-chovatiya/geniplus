@@ -94,42 +94,38 @@ const Table = ({
                               className="absolute w-0 h-0 opacity-0"
                             />
                             <span
-                              className={`block w-10 h-6 rounded-full bg-gray-400 ${
-                                item[col.key] ? "bg-green-500" : "bg-red-500"
-                              } transition-all`}
+                              className={`block w-10 h-6 rounded-full bg-gray-400 ${item[col.key] ? "bg-green-500" : "bg-red-500"
+                                } transition-all`}
                             />
                             <span
-                              className={`absolute left-1 top-1 w-4 h-4  bg-white rounded-full transition-all ${
-                                item[col.key] ? "translate-x-4" : ""
-                              }`}
+                              className={`absolute left-1 top-1 w-4 h-4  bg-white rounded-full transition-all ${item[col.key] ? "translate-x-4" : ""
+                                }`}
                             />
                           </label>
                         ) : (
                           <p
-                            className={`font-medium ${
-                              item[col.key] === "Present"
+                            className={`font-medium ${item[col.key] === "Present"
                                 ? "text-green-600"
                                 : item[col.key] === "Absent"
-                                ? "text-red"
-                                : item[col.key]
-                                ? "text-green-600"
-                                : "text-red"
-                            }`}
+                                  ? "text-red"
+                                  : item[col.key]
+                                    ? "text-green-600"
+                                    : "text-red"
+                              }`}
                           >
                             {item[col.key] === "Present"
                               ? "Present"
                               : item[col.key] === "Absent"
-                              ? "Absent"
-                              : item[col.key]
-                              ? "Active"
-                              : "Inactive"}
+                                ? "Absent"
+                                : item[col.key]
+                                  ? "Active"
+                                  : "Inactive"}
                           </p>
                         )
                       ) : col.key === "hwStatus" ? (
                         <p
-                          className={`font-medium ${
-                            item[col.key] ? "text-green-600" : "text-red"
-                          }`}
+                          className={`font-medium ${item[col.key] ? "text-green-600" : "text-red"
+                            }`}
                         >
                           {item[col.key] ? "Complete" : "Incomplete"}
                         </p>
@@ -178,6 +174,15 @@ const Table = ({
                           className="w-16 h-16 object-cover border border-stroke dark:border-strokedark rounded-md cursor-pointer"
                           onClick={() => onImageClick(item[col.key])}
                         />
+                      ) : [
+                        "additionMark",
+                        "subtractionMark",
+                        "multiplicationMark",
+                        "divisionMark",
+                      ].includes(col.key) ? (
+                        <p className="text-black dark:text-amber-300 font-semibold line-clamp-3">
+                          {item[col.key] || "-----"}
+                        </p>
                       ) : (
                         <p className="text-black dark:text-white line-clamp-3">
                           {item[col.key] || "-----"}
@@ -187,11 +192,10 @@ const Table = ({
                   ))}
                   <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                     <div
-                      className={`flex items-center ${
-                        editButtonVisible || deleteButtonVisible
+                      className={`flex items-center ${editButtonVisible || deleteButtonVisible
                           ? "space-x-3.5"
                           : "justify-center"
-                      }`}
+                        }`}
                     >
                       {editButtonVisible &&
                         (typeof editLinkPrefix === "string" ? (
